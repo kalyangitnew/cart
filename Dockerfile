@@ -1,6 +1,5 @@
 FROM node
-RUN useradd roboshop
-RUN mkdir /app && chown roboshop:roboshop app
+RUN useradd -m -d /app roboshop
 USER roboshop
 WORKDIR /app
 ADD package.json .
